@@ -1,4 +1,4 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "LogManager.h"
 
 
@@ -21,7 +21,7 @@ void LogManager::WriteLog(CString insertData)
 	CTime cTime = CTime::GetCurrentTime();
 
 	CString strDate;
-	strDate.Format("[%04d³â %02d¿ù %02dÀÏ %02d½Ã %02dºĞ %02dÃÊ]", cTime.GetYear(), 
+	strDate.Format("[%04dë…„ %02dì›” %02dì¼ %02dì‹œ %02dë¶„ %02dì´ˆ]", cTime.GetYear(), 
 		cTime.GetMonth(), 
 		cTime.GetDay(),
 		cTime.GetHour(),

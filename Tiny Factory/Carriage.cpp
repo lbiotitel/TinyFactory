@@ -1,15 +1,15 @@
-#include "Carriage.h"
+ï»¿#include "Carriage.h"
 #include <afxinet.h>
 
 void Carriage::StartCarriage()
 {
-	LogManager::GetInstance()->WriteLog("È­¹°Â÷ Ãâ¹ß");
+	LogManager::GetInstance()->WriteLog("í™”ë¬¼ì°¨ ì¶œë°œ");
 	ConnectToCarriage("/start");
 }
 
 void Carriage::WaitCarriage()
 {
-	LogManager::GetInstance()->WriteLog("È­¹°Â÷ ÁØºñ");
+	LogManager::GetInstance()->WriteLog("í™”ë¬¼ì°¨ ì¤€ë¹„");
 	ConnectToCarriage("/wait");
 }
 
@@ -43,11 +43,11 @@ bool Carriage::ConnectToCarriage(CString command)
 			while (file->ReadString(line))
 				response += line;
 
-			LogManager::GetInstance()->WriteLog("È­¹°Â÷ Åë½Å ¿Ï·á");
+			LogManager::GetInstance()->WriteLog("í™”ë¬¼ì°¨ í†µì‹  ì™„ë£Œ");
 			return true;
 		}
 		else {
-			LogManager::GetInstance()->WriteLog("È­¹°Â÷ Åë½Å ½ÇÆÐ");
+			LogManager::GetInstance()->WriteLog("í™”ë¬¼ì°¨ í†µì‹  ì‹¤íŒ¨");
 			return false;
 		}
 
@@ -61,7 +61,7 @@ bool Carriage::ConnectToCarriage(CString command)
 		}
 	}
 	catch (CInternetException* e) {
-		LogManager::GetInstance()->WriteLog("È­¹°Â÷ Åë½Å ½ÇÆÐ");
+		LogManager::GetInstance()->WriteLog("í™”ë¬¼ì°¨ í†µì‹  ì‹¤íŒ¨");
 		e->Delete();
 		return false;
 	}

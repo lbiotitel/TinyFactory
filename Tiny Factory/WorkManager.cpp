@@ -1,4 +1,4 @@
-#include  "WorkManager.h"
+ï»¿#include  "WorkManager.h"
 #include <opencv2/core/cvstd.hpp>
 #include "DataManager.h"
 
@@ -60,7 +60,7 @@ void WorkManager::ObjectDetection()
 	{
 		isDetection = true;
 
-		LogManager::GetInstance()->WriteLog("¿ÀºêÁ§Æ® °¨ÁöµÊ.");
+		LogManager::GetInstance()->WriteLog("ì˜¤ë¸Œì íŠ¸ ê°ì§€ë¨.");
 	}
 }
 
@@ -79,7 +79,7 @@ void WorkManager::FinishYOLO(std::vector<cv::String> classNames)
 
 	if (!isNormal)
 	{		
-		LogManager::GetInstance()->WriteLog("ºñÁ¤»óÀûÀÎ ¿ÀºêÁ§Æ® °¨ÁöµÊ.");
+		LogManager::GetInstance()->WriteLog("ë¹„ì •ìƒì ì¸ ì˜¤ë¸Œì íŠ¸ ê°ì§€ë¨.");
 
 		DataManager::GetInstance()->IncreaseWrongCount();
 
@@ -89,7 +89,7 @@ void WorkManager::FinishYOLO(std::vector<cv::String> classNames)
 		}
 	}
 	else {
-		LogManager::GetInstance()->WriteLog("Á¤»óÀûÀÎ ¿ÀºêÁ§Æ® °¨ÁöµÊ.");
+		LogManager::GetInstance()->WriteLog("ì •ìƒì ì¸ ì˜¤ë¸Œì íŠ¸ ê°ì§€ë¨.");
 
 		DataManager::GetInstance()->IncreaseNormalCount();
 

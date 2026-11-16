@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "pch.h"
 #include <queue>
@@ -25,23 +25,23 @@ public:
 	{
 		if (portNumber == "")
 		{
-			LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ Æ÷Æ®ÀÇ ¹øÈ£°¡ À¯È¿ÇÏÁö ¾ÊÀ½");
+			LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” í¬íŠ¸ì˜ ë²ˆí˜¸ê°€ ìœ íš¨í•˜ì§€ ì•ŠìŒ");
 		}
 		else
 		{
-			LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ : " + portNumber + " port ¿¡ ¿¬°á½Ãµµ");
+			LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” : " + portNumber + " port ì— ì—°ê²°ì‹œë„");
 
 			this->sp = new Serial(PORT_PREFIX + portNumber,BAUDRATE);
 
 			if (sp->IsConnected())
 			{
 				this->dialog = dialog;
-				LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ : " + portNumber + " port¿¡ ¿¬°á ¿Ï·á");
+				LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” : " + portNumber + " portì— ì—°ê²° ì™„ë£Œ");
 				StartDataProcess();
 				return true;
 			}
 			else {
-				LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ : " + portNumber + " port¿¡ ¿¬°á ½ÇÆĞ...");
+				LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” : " + portNumber + " portì— ì—°ê²° ì‹¤íŒ¨...");
 			}
 		}
 

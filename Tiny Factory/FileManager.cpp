@@ -1,4 +1,4 @@
-#include "FileManager.h"
+ï»¿#include "FileManager.h"
 #include<fstream>
 #include<vector>
 #include<string>
@@ -7,7 +7,7 @@ FileManager* FileManager::instance = nullptr;
 
 bool FileManager::SaveFile(std::vector<CString>  data)
 {
-    //¸Ş¸ğÀå¿¡ µ¥ÀÌÅÍ ÀúÀå
+    //ë©”ëª¨ì¥ì— ë°ì´í„° ì €ì¥
     TCHAR path[256] = { 0, };
     GetModuleFileName(NULL, path, 256);
 
@@ -25,10 +25,10 @@ bool FileManager::SaveFile(std::vector<CString>  data)
 
         fout.close();
 
-        LogManager::GetInstance()->WriteLog("·Î±× µ¥ÀÌÅÍ ÀúÀå ¿Ï·á.");
+        LogManager::GetInstance()->WriteLog("ë¡œê·¸ ë°ì´í„° ì €ì¥ ì™„ë£Œ.");
     }
     else {
-        LogManager::GetInstance()->WriteLog("·Î±× µ¥ÀÌÅÍ ÀúÀå ½ÇÆĞ.");
+        LogManager::GetInstance()->WriteLog("ë¡œê·¸ ë°ì´í„° ì €ì¥ ì‹¤íŒ¨.");
     }
 
     return false;

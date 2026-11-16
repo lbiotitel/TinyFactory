@@ -1,11 +1,11 @@
-#include "RobotArmSP.h"
+ï»¿#include "RobotArmSP.h"
 #include"DataManager.h"
 
 void RobotArmSP::StartDataProcess()
 {
 	if (sp == nullptr)return;
 
-	LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ ÀÛµ¿");
+	LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” ìž‘ë™");
 
 
 	isRun = true;
@@ -31,7 +31,7 @@ void RobotArmSP::SendCommand(CString command)
 {
 	if (sp == nullptr)return;
 
-	LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ ¸í·É¾î ¼Û½Å");
+	LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” ëª…ë ¹ì–´ ì†¡ì‹ ");
 
 	if (sp->IsConnected())
 	{
@@ -53,7 +53,7 @@ void RobotArmSP::SendCommandList(CString command,bool rightOrWrong)
 
 	if (sp == nullptr)return;
 
-	LogManager::GetInstance()->WriteLog("·Îº¿ÆÈ ¸í·É¾î ¼Û½Å");
+	LogManager::GetInstance()->WriteLog("ë¡œë´‡íŒ” ëª…ë ¹ì–´ ì†¡ì‹ ");
 
 	if (sp->IsConnected())
 	{

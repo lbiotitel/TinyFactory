@@ -1,10 +1,10 @@
-#include "DataProcessSP.h"
+ο»Ώ#include "DataProcessSP.h"
 
 void DataProcessSP::StartDataProcess()
 {
 	if (sp == nullptr)return;
 
-	LogManager::GetInstance()->WriteLog("µ¥ΐΜΕΝ Ελ½Ε ΐΫµΏ");
+	LogManager::GetInstance()->WriteLog("λ°μ΄ν„° ν†µμ‹  μ‘λ™");
 
 	isRun = true;
 

@@ -1,4 +1,4 @@
-#include "string"	
+Ôªø#include "string"	
 #include"opencv2/opencv.hpp"
 
 
@@ -24,7 +24,7 @@ typedef int CONTROLID;
 #define SPLASH_TIME 3000
 
 
-//ƒøΩ∫≈“ ∏ﬁΩ√¡ˆ
+//Ïª§Ïä§ÌÖÄ Î©îÏãúÏßÄ
 #define ON_CONNECT_COMPLETE_MESSAGE WM_USER + 150
 #define DETECTIONFINISH ON_CONNECT_COMPLETE_MESSAGE + 200
 #define DETECTION_RESET ON_CONNECT_COMPLETE_MESSAGE + 250
@@ -33,7 +33,7 @@ typedef int CONTROLID;
 #define CONVEYORBELT_CONDITION_CHANGED WM_USER + 1200
 #define ROBOTARM_CONDITION_CHANGED WM_USER + 1300
 
-//ƒ´∏ﬁ∂Û
+//Ïπ¥Î©îÎùº
 #define CAMERA_WIDTH 640
 #define CAMERA_HEIGHT 480
 #define CAMERA_EVENT 1000
@@ -41,10 +41,10 @@ typedef int CONTROLID;
 #define DETECTIONWAITTIME 5000
 
 
-//µ•¿Ã≈Õ º¬
-const std::string yoloCfg = "C:/Users/biotite/Desktop/file/test.cfg";
-const std::string yoloWeight = "C:/Users/biotite/Desktop/file/test_last.weights";
-const std::string yoloClassFile = "C:/Users/biotite/Desktop/file/tiny.names";
+//Îç∞Ïù¥ÌÑ∞ ÏÖã (Model Ìè¥ÎçîÏóê YOLO ÌïôÏäµ ÌååÏùºÏùÑ ÎÑ£Ïñ¥ÏÑú Ïã§Ìñâ)
+const std::string yoloCfg = "Model/test.cfg";
+const std::string yoloWeight = "Model/test_last.weights";
+const std::string yoloClassFile = "Model/tiny.names";
 #define THRESHOLD 0.5
 
 
@@ -53,18 +53,18 @@ const cv::String NORMALOBJECT = "NORMAL";
 #define DIFFRENTCOLOROBJECT "DIFFERENTCOLOR"
 
 
-//µ•¿Ã≈Õ ≈ÎΩ≈
+//Îç∞Ïù¥ÌÑ∞ ÌÜµÏã†
 #define DATAPROCESS_ON_DATA "ON\n"
 #define DATAPROCESS_OFF_DATA "OFF\n"
 
 
 
-//»≠π∞¬˜
+//ÌôîÎ¨ºÏ∞®
 #define MAX_CARRIAGE_COUNT 5
 #define CURRENT_CARRIAGE 2
 
 
-//∑Œ∫ø ∆»
+//Î°úÎ¥á Ìåî
 
 #define AMOTOR_MAX_RANGE 180
 #define AMOTOR_MIN_RANGE 0
@@ -97,7 +97,7 @@ const cv::String NORMALOBJECT = "NORMAL";
 #define WRONG_OBJECT "WRONG_OBJECT"
 
 
-//µ•¿Ã≈Õ ∏≈¥œ¿˙
+//Îç∞Ïù¥ÌÑ∞ Îß§ÎãàÏ†Ä
 #define NORMAL_OBJECT_INC ON_CONNECT_COMPLETE_MESSAGE + 300
 #define WRONG_OBJECT_INC ON_CONNECT_COMPLETE_MESSAGE + 350
 
@@ -106,7 +106,7 @@ const cv::String NORMALOBJECT = "NORMAL";
 #define ROBOT_FRAME_LDOWN ON_CONNECT_COMPLETE_MESSAGE + 400
 
 
-//ªˆªÛ
+//ÏÉâÏÉÅ
 #define WHITE_COLOR RGB(255, 255, 255)
 #define BACKGROUND_BASE_COLOR RGB(54, 57, 63)
 #define DARK_GRAY RGB(70, 70, 70)

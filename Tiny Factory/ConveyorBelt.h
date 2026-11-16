@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "SerialClass.h"
 #include"pch.h"
 #include "resource.h"
@@ -25,23 +25,23 @@ public:
 	{
 		if (portNumber == "")
 		{
-			LogManager::GetInstance()->WriteLog("ÄÁº£ÀÌ¾î º§Æ® Æ÷Æ®ÀÇ ¹øÈ£°¡ À¯È¿ÇÏÁö ¾ÊÀ½");
+			LogManager::GetInstance()->WriteLog("ì»¨ë² ì´ì–´ ë²¨íŠ¸ í¬íŠ¸ì˜ ë²ˆí˜¸ê°€ ìœ íš¨í•˜ì§€ ì•ŠìŒ");
 		}
 		else
 		{
-			LogManager::GetInstance()->WriteLog("ÄÁº£ÀÌ¾î º§Æ® : " + portNumber + " port ¿¡ ¿¬°á½Ãµµ");
+			LogManager::GetInstance()->WriteLog("ì»¨ë² ì´ì–´ ë²¨íŠ¸ : " + portNumber + " port ì— ì—°ê²°ì‹œë„");
 
 			this->sp = new Serial(PORT_PREFIX + portNumber,115200);
 
 			if (sp->IsConnected())
 			{
 				this->dialog = dialog;
-				LogManager::GetInstance()->WriteLog("ÄÁº£ÀÌ¾î º§Æ® : " + portNumber + " port¿¡ ¿¬°á ¿Ï·á");
+				LogManager::GetInstance()->WriteLog("ì»¨ë² ì´ì–´ ë²¨íŠ¸ : " + portNumber + " portì— ì—°ê²° ì™„ë£Œ");
 				StartConveyorBelt();
 				return true;
 			}
 			else {
-				LogManager::GetInstance()->WriteLog("ÄÁº£ÀÌ¾î º§Æ® : " + portNumber + " port¿¡ ¿¬°á ½ÇÆĞ...");
+				LogManager::GetInstance()->WriteLog("ì»¨ë² ì´ì–´ ë²¨íŠ¸ : " + portNumber + " portì— ì—°ê²° ì‹¤íŒ¨...");
 			}
 		}
 		

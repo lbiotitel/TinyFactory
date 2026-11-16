@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include"pch.h"
 #include"ObjectDetection.h"
 #include"opencv2/opencv.hpp"
@@ -35,11 +35,11 @@ public:
 
 		if (!videoCapture->isOpened())
 		{
-			LogManager::GetInstance()->WriteLog("ī�޶� ���� �� �� �����ϴ�.");
+			LogManager::GetInstance()->WriteLog("카메라를 연결 할 수 없습니다.");
 			return;
 		}
 		else {
-			LogManager::GetInstance()->WriteLog("ī�޶� ���� �Ϸ��߽��ϴ�.");
+			LogManager::GetInstance()->WriteLog("카메라를 연결 완료했습니다.");
 
 			if (objectDetction == nullptr)
 			{

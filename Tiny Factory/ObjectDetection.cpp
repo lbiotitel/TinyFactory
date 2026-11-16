@@ -1,4 +1,4 @@
-#include "ObjectDetection.h"
+ï»¿#include "ObjectDetection.h"
 
 #include "pch.h"
 #include "opencv2/opencv.hpp"
@@ -88,17 +88,17 @@ void ObjectDetection::InitTrainSet()
 
 		if (m_net.empty())
 		{
-			LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ ¼ÂÀÌ ·Îµå µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+			LogManager::GetInstance()->WriteLog("ë°ì´í„° ì…‹ì´ ë¡œë“œ ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
 		}
 		else {
-			LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ ¼Â ÁØºñ ¿Ï·á.");
+			LogManager::GetInstance()->WriteLog("ë°ì´í„° ì…‹ ì¤€ë¹„ ì™„ë£Œ.");
 		}
 
 		m_net.setPreferableBackend(DNN_BACKEND_OPENCV);
 		m_net.setPreferableTarget(DNN_TARGET_CPU);
 	}catch(Exception e)
 	{
-		LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ ¼ÂÀÌ Á¸ÀçÇÏÁö ¾ÊÀ½.");
+		LogManager::GetInstance()->WriteLog("ë°ì´í„° ì…‹ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŒ.");
 	}
 }
 
@@ -111,9 +111,9 @@ void ObjectDetection::processDetections(const std::vector<Mat>& outs, const Mat&
 	for (size_t i = 0; i < outs.size(); ++i)
 	{
 		float* data = (float*)outs[i].data;
-		for (int j = 0; j < outs[i].rows; ++j, data += outs[i].cols) //Å½ÁöµÈ °´Ã¼¿¡ ´ëÇØ ¹İº¹
+		for (int j = 0; j < outs[i].rows; ++j, data += outs[i].cols) //íƒì§€ëœ ê°ì²´ì— ëŒ€í•´ ë°˜ë³µ
 		{
-			Mat scores = outs[i].row(j).colRange(5, outs[i].cols); //Å¬·¡½º È®·üÀ» ÀúÀåÇÑ ºÎºĞ
+			Mat scores = outs[i].row(j).colRange(5, outs[i].cols); //í´ë˜ìŠ¤ í™•ë¥ ì„ ì €ì¥í•œ ë¶€ë¶„
 			Point classIdPoint;
 			double confidence;
 

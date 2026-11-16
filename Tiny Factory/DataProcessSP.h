@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "pch.h"
 #include "SerialClass.h"
@@ -17,20 +17,20 @@ public:
 	{
 		if (portNumber == "")
 		{
-			LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ Æ÷Æ®ÀÇ ¹øÈ£°¡ À¯È¿ÇÏÁö ¾ÊÀ½");
+			LogManager::GetInstance()->WriteLog("ë°ì´í„° í¬íŠ¸ì˜ ë²ˆí˜¸ê°€ ìœ íš¨í•˜ì§€ ì•ŠìŒ");
 		}
 		else
 		{
-			LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ : " + portNumber + " port ¿¡ ¿¬°á½Ãµµ");
+			LogManager::GetInstance()->WriteLog("ë°ì´í„° : " + portNumber + " port ì— ì—°ê²°ì‹œë„");
 
 			this->sp = new Serial(PORT_PREFIX + portNumber);
 
 			if (sp->IsConnected())
 			{
-				LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ : " + portNumber + " port¿¡ ¿¬°á ¿Ï·á");
+				LogManager::GetInstance()->WriteLog("ë°ì´í„° : " + portNumber + " portì— ì—°ê²° ì™„ë£Œ");
 			}
 			else {
-				LogManager::GetInstance()->WriteLog("µ¥ÀÌÅÍ : " + portNumber + " port¿¡ ¿¬°á ½ÇÆĞ...");
+				LogManager::GetInstance()->WriteLog("ë°ì´í„° : " + portNumber + " portì— ì—°ê²° ì‹¤íŒ¨...");
 			}
 		}
 	}

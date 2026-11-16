@@ -1,4 +1,4 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "ConveyorBelt.h"
 #include"DataManager.h"
 
@@ -10,7 +10,7 @@ void ConveyorBeltSP::StopConveyorBelt()
 	{
 		if (sp->IsConnected())
 		{
-			LogManager::GetInstance()->WriteLog("ÄÁº£ÀÌ¾î º§Æ® ÀÛµ¿ ÁßÁö");
+			LogManager::GetInstance()->WriteLog("ì»¨ë² ì´ì–´ ë²¨íŠ¸ ì‘ë™ ì¤‘ì§€");
 			sp->WriteData(CONVAYORBELT_OFF_DATA, DATA_LENGTH);
 			PostMessage(dialog->m_hWnd, CONVEYORBELT_CONDITION_CHANGED, Status::OFF, NULL);
 		}
@@ -22,7 +22,7 @@ void ConveyorBeltSP::StartConveyorBelt()
 {
 	if (sp == nullptr)return;
 
-	LogManager::GetInstance()->WriteLog("ÄÁº£ÀÌ¾î º§Æ® ÀÛµ¿");
+	LogManager::GetInstance()->WriteLog("ì»¨ë² ì´ì–´ ë²¨íŠ¸ ì‘ë™");
 
 	isRun = true;
 

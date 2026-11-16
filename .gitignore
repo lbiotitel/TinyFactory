@@ -364,3 +364,7 @@ FodyWeavers.xsd
 
 Tiny Factory/opencv_world480.dll
 Tiny Factory/opencv_world480d.dll
+
+# Runtime / OS files
+Tiny Factory/log.txt
+desktop.ini

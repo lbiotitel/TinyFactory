@@ -1,4 +1,4 @@
-#include "RobotFrameBox.h"
+Ôªø#include "RobotFrameBox.h"
 #include "Define.h"
 
 
@@ -197,7 +197,7 @@ void RobotFrameBox::OnMouseMove(UINT nFlags, CPoint point)
         memDC.FillSolidRect(itemRect, m_backgroundColor);  
         memDC.SetBkMode(TRANSPARENT); 
         memDC.SetTextColor(m_textColor);
-        memDC.DrawText(itemText, &itemRect, DT_CENTER | DT_VCENTER | DT_SINGLELINE); // ≈ÿΩ∫∆Æ ±◊∏Æ±‚
+        memDC.DrawText(itemText, &itemRect, DT_CENTER | DT_VCENTER | DT_SINGLELINE); // ÌÖçÏä§Ìä∏ Í∑∏Î¶¨Í∏∞
 
  
         dc.BitBlt(0, 0, clientRect.Width(), clientRect.Height(), &memDC, 0, 0, SRCCOPY);
