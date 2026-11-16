@@ -35,10 +35,10 @@ void Camera::ReleaseCamera()
     if(imageMfc)imageMfc.Destroy();
 
 
-    if (objectDetction != nullptr)
+    if (objectDetection != nullptr)
     {
-        delete objectDetction;
-        objectDetction = nullptr;
+        delete objectDetection;
+        objectDetection = nullptr;
     }
 
     matFrame.release();
@@ -58,9 +58,9 @@ void Camera::DrawRect()
 
     if (matFrame.empty())return;
 
-    if (objectDetction != nullptr)
+    if (objectDetection != nullptr)
     {
-        objectDetction->YoloDataFrame(matFrame);
+        objectDetection->YoloDataFrame(matFrame);
     }
 
     HDC dc = ::GetDC(videoRect->m_hWnd);

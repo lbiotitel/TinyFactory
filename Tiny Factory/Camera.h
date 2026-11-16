@@ -17,12 +17,12 @@ private:
 	bool isRun = false;
 	CWinThread* cameraThread;
 
-	ObjectDetection* objectDetction;
+	ObjectDetection* objectDetection;
 
 
 public:
 	Camera(IN CStatic* videoRect,CStatic* detectionRect ,int videoNumber):winSize(),imageMfc(),cameraThread(nullptr),fps(0),
-		videoCapture(nullptr),objectDetction(nullptr)
+		videoCapture(nullptr),objectDetection(nullptr)
 	{
 		this->videoRect = videoRect;
 
@@ -41,9 +41,9 @@ public:
 		else {
 			LogManager::GetInstance()->WriteLog("카메라를 연결 완료했습니다.");
 
-			if (objectDetction == nullptr)
+			if (objectDetection == nullptr)
 			{
-				objectDetction = new ObjectDetection(detectionRect);
+				objectDetection = new ObjectDetection(detectionRect);
 			}
 		}
 
@@ -64,7 +64,7 @@ public:
 public:
 	void DisplayCamera(int fps = 30);
 	void StopCamera();
-	ObjectDetection* GetObjectDetection() { return objectDetction; }
+	ObjectDetection* GetObjectDetection() { return objectDetection; }
 
 private:
 	void DrawRect();

@@ -151,13 +151,13 @@ void ObjectDetection::processDetections(const std::vector<Mat>& outs, const Mat&
 
 	if (flag)
 	{
-		DrawObjectdetection(img);
+		DrawObjectDetection(img);
 		isFinishYolo = true;
 		WorkManager::GetInstance()->FinishYOLO(classNames);
 	}
 }
 
-void ObjectDetection::DrawObjectdetection(const Mat& img)
+void ObjectDetection::DrawObjectDetection(const Mat& img)
 {
 	if (img.empty()) return;
 

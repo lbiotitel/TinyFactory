@@ -25,7 +25,7 @@
 #define STOP_BTN                        1006
 #define CAMERARECT                      1007
 #define CAMERARECT2                     1008
-#define DERECTIONRECT                   1008
+#define DETECTIONRECT                   1008
 #define ROBOT_COMMAND_LISTBOX           1010
 #define IDC_SLIDER1                     1011
 #define IDC_A_MOTOR_SLIDER              1011

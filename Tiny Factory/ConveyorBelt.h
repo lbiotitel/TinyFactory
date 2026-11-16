@@ -63,8 +63,8 @@ public:
 	void ResetGoal();
 	
 private:
-	void ParsingReciveData(CString data);
+	void ParsingReceiveData(CString data);
 	void ReleaseConveyorBelt();
-	static UINT ConvayorBeltRun(LPVOID lpParam);
+	static UINT ConveyorBeltRun(LPVOID lpParam);
 };
 

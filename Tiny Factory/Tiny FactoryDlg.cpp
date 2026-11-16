@@ -73,7 +73,7 @@ void CTinyFactoryDlg::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, LOG_LIST_BOX, logListBox);
 	DDX_Control(pDX, CAMERARECT, videoRect);
-	DDX_Control(pDX, DERECTIONRECT, detectionRect);
+	DDX_Control(pDX, DETECTIONRECT, detectionRect);
 	DDX_Control(pDX, STOP_BTN, stopBtn);
 	DDX_Control(pDX, START_BTN, startBtn);
 	DDX_Control(pDX, ROBOTCONTROLBTN, robotcontrolBtn);
@@ -89,7 +89,7 @@ BEGIN_MESSAGE_MAP(CTinyFactoryDlg, CDialogEx)
 	ON_MESSAGE(ON_CONNECT_COMPLETE_MESSAGE, &CTinyFactoryDlg::OnConnectCompleteMessage)
 	ON_MESSAGE(NORMAL_OBJECT_INC, &CTinyFactoryDlg::OnNormalObjectInc)
 	ON_MESSAGE(WRONG_OBJECT_INC, &CTinyFactoryDlg::OnWrongObjectInc)
-	ON_MESSAGE(DETECTIONFINISH, &CTinyFactoryDlg::OnDectionFinish)
+	ON_MESSAGE(DETECTIONFINISH, &CTinyFactoryDlg::OnDetectionFinish)
 	ON_MESSAGE(LOG_WRITE, &CTinyFactoryDlg::OnLogWrite)
 	ON_MESSAGE(CONVEYORBELT_CONDITION_CHANGED, &CTinyFactoryDlg::OnConveyorBeltConditionChanged)
 	ON_MESSAGE(ROBOTARM_CONDITION_CHANGED, &CTinyFactoryDlg::OnRobotArmConditionChanged)
@@ -297,7 +297,7 @@ void CTinyFactoryDlg::OnBnClickedStartBtn()
 		conveyorBeltSp = new ConveyorBeltSP();
 		if (conveyorBeltSp->InitConveyorBeltSP(beltPort, this))
 		{
-			WorkManager::GetInstance()->InitConvayorBeltSP(conveyorBeltSp);
+			WorkManager::GetInstance()->InitConveyorBeltSP(conveyorBeltSp);
 		}
 		else delete conveyorBeltSp;
 
@@ -384,7 +384,7 @@ LRESULT CTinyFactoryDlg::OnConnectCompleteMessage(WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-LRESULT CTinyFactoryDlg::OnDectionFinish(WPARAM wParam, LPARAM lParam)
+LRESULT CTinyFactoryDlg::OnDetectionFinish(WPARAM wParam, LPARAM lParam)
 {
 	SetTimer(DETECTION_RESET, DETECTIONWAITTIME, NULL);
 	return LRESULT();

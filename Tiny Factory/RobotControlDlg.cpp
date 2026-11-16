@@ -33,7 +33,7 @@ void RobotControlDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, ROBOT_TEST_BTN, robotTestBtn);
 	DDX_Control(pDX, ROBOT_ADD_FRAME_BTN, robotAddFrameBtn);
 	DDX_Control(pDX, ROBOT_DELETE_FRAME_BTN, robotDeleteFrameBtn);
-	DDX_Control(pDX, ROBOT_SEND_COMMAND_BTN, robotSendCommanBtn);
+	DDX_Control(pDX, ROBOT_SEND_COMMAND_BTN, robotSendCommandBtn);
 	DDX_Control(pDX, ROBOT_ARM_STOP_BTN, robotStopBtn);
 	DDX_Control(pDX, IDC_BUTTON4, carTestBtn);
 	DDX_Control(pDX, IDC_BUTTON5, carStopBtn);
@@ -49,7 +49,7 @@ void RobotControlDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(RobotControlDlg, CDialogEx)
 	ON_BN_CLICKED(ROBOT_RECORD_BTN, &RobotControlDlg::OnBnClickedAddFrame)
 	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_A_MOTOR_SLIDER, &RobotControlDlg::OnNMReleasedcaptureAMotorSlider)
-	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_B_MOTOR_SLIDER, &RobotControlDlg::OnNMReleasedcaputreBMotorSlider)
+	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_B_MOTOR_SLIDER, &RobotControlDlg::OnNMReleasedcaptureBMotorSlider)
 	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_C_MOTOR_SLIDER, &RobotControlDlg::OnNMReleasedCaptureCMotorSlider)
 	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_D_MOTOR_SLIDER, &RobotControlDlg::OnNMReleasedcaptureDMotorSlider)
 	ON_BN_CLICKED(ROBOT_SEND_COMMAND_BTN, &RobotControlDlg::OnBnClickedSendCommandBtn)
@@ -225,9 +225,9 @@ void RobotControlDlg::CustomDlg()
 	{
 		robotDeleteFrameBtn.SetFont(&robotBtnFont);
 	}
-	if (robotSendCommanBtn)
+	if (robotSendCommandBtn)
 	{
-		robotSendCommanBtn.SetFont(&robotBtnFont);
+		robotSendCommandBtn.SetFont(&robotBtnFont);
 	}
 	if (robotStopBtn)
 	{
@@ -262,7 +262,7 @@ void RobotControlDlg::OnDestroy()
 }
 
 
-void RobotControlDlg::OnNMReleasedcaputreBMotorSlider(NMHDR* pNMHDR, LRESULT* pResult)
+void RobotControlDlg::OnNMReleasedcaptureBMotorSlider(NMHDR* pNMHDR, LRESULT* pResult)
 {
 	bMotorMove = true;
 		 
@@ -524,6 +524,6 @@ void RobotControlDlg::OnBnClickedStopBtn()
 
 void RobotControlDlg::OnBnClickedCarriageCountApplyBtn()
 {
-	int currentCoutnt = WorkManager::GetInstance()->GetMaxCarriageCount();
-	WorkManager::GetInstance()->SetMaxCarriage(currentCoutnt);
+	int currentCount = WorkManager::GetInstance()->GetMaxCarriageCount();
+	WorkManager::GetInstance()->SetMaxCarriage(currentCount);
 }

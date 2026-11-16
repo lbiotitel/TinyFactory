@@ -46,7 +46,7 @@ private:
 	HWND mainHandle = nullptr;
 
 public:
-	void InitConvayorBeltSP(ConveyorBeltSP* conveyorBeltSP)
+	void InitConveyorBeltSP(ConveyorBeltSP* conveyorBeltSP)
 	{
 		this->conveyorBeltSP = conveyorBeltSP;
 	}

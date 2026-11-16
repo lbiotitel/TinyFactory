@@ -103,15 +103,15 @@ void RobotArmSP::ResetIsPlaying()
 void RobotArmSP::ParsingData(CString command)
 {
 	const bool isCommandFinish =
-		(command == RIGHT_COMMANDFNINISH ||
+		(command == RIGHT_COMMANDFINISH ||
 			command == EMPTY_OBJECT ||
-			command == WRONG_COMMANDFNINISH);
+			command == WRONG_COMMANDFINISH);
 
 	if (isCommandFinish) {
 		PostMessage(dialog->m_hWnd, ROBOTARM_CONDITION_CHANGED, Status::WAIT, NULL);
 	}
 
-	if (command == RIGHT_COMMANDFNINISH) {
+	if (command == RIGHT_COMMANDFINISH) {
 		++rightCount;
 		DataManager::GetInstance()->CheckNormalCount(&rightCount);
 	}

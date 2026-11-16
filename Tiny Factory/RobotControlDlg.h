@@ -48,7 +48,7 @@ private:
 	CustomBtn robotTestBtn;
 	CustomBtn robotAddFrameBtn;
 	CustomBtn robotDeleteFrameBtn;
-	CustomBtn robotSendCommanBtn;
+	CustomBtn robotSendCommandBtn;
 	CustomBtn robotStopBtn;
 	
 	CustomBtn carTestBtn;
@@ -88,7 +88,7 @@ public:
 	afx_msg void OnBnClickedAddFrame();
 	afx_msg void OnNMReleasedcaptureAMotorSlider(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnDestroy();
-	afx_msg void OnNMReleasedcaputreBMotorSlider(NMHDR* pNMHDR, LRESULT* pResult);
+	afx_msg void OnNMReleasedcaptureBMotorSlider(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnNMReleasedCaptureCMotorSlider(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnNMReleasedcaptureDMotorSlider(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnBnClickedSendCommandBtn();

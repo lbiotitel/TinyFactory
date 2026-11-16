@@ -77,7 +77,7 @@ public:
     afx_msg void OnStopBtnClicked();
 
     afx_msg LRESULT OnConnectCompleteMessage(WPARAM wParam, LPARAM lParam);
-    afx_msg LRESULT OnDectionFinish(WPARAM wParam, LPARAM lParam);
+    afx_msg LRESULT OnDetectionFinish(WPARAM wParam, LPARAM lParam);
     afx_msg LRESULT OnNormalObjectInc(WPARAM wParam, LPARAM lParam);
     afx_msg LRESULT OnWrongObjectInc(WPARAM wParam, LPARAM lParam);
     afx_msg LRESULT OnLogWrite(WPARAM wParam, LPARAM lParam);

@@ -6,7 +6,7 @@ Serial::Serial(const char* portName,int baudRate)
     //We're not yet connected
     this->connected = false;
 
-    //Try to connect to the given port throuh CreateFile
+    //Try to connect to the given port through CreateFile
     this->hSerial = CreateFile(portName,
         GENERIC_READ | GENERIC_WRITE,
         0,
@@ -15,13 +15,13 @@ Serial::Serial(const char* portName,int baudRate)
         FILE_ATTRIBUTE_NORMAL,
         NULL);
 
-    //Check if the connection was successfull
+    //Check if the connection was successful
     if (this->hSerial == INVALID_HANDLE_VALUE)
     {
         //If not success full display an Error
         if (GetLastError() == ERROR_FILE_NOT_FOUND) {
 
-            //Print Error if neccessary
+            //Print Error if necessary
             printf("ERROR: Handle was not attached. Reason: %s not available.\n", portName);
 
         }
@@ -63,7 +63,7 @@ Serial::Serial(const char* portName,int baudRate)
                 this->connected = true;
                 //Flush any remaining characters in the buffers 
                 PurgeComm(this->hSerial, PURGE_RXCLEAR | PURGE_TXCLEAR);
-                //We wait 2s as the arduino board will be reseting
+                //We wait 2s as the arduino board will be resetting
                 Sleep(ARDUINO_WAIT_TIME);
             }
         }
