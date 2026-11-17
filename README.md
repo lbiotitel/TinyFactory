@@ -8,6 +8,8 @@ MFC로 만든 프로그램이 컨베이어 벨트, 로봇팔, 운반차를 제�
 | 구분 | 졸업 작품 (최우수상 수상) |
 | 개발 기간 | 2024.11 |
 | 사용 기술 | C++, MFC, OpenCV (YOLO), Arduino, 시리얼 통신, HTTP |
+| 실행 영상 | https://www.youtube.com/watch?v=Ssp9-5lVbss |
+
 
 <!-- 스크린샷: ![관제 화면](Docs/main.png) -->
 
